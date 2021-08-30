@@ -23,6 +23,9 @@ elif (args.lance_status == "2"):
 	lance_status = 'ok'
 
 payments = json.load(open("json/payments.json", 'r'))
+
+commit_message = f"Add {args.lance_id} lance" if args.delete == False else f"Delete {args.lance_id}" if args.delete == True and payments['data']['lance_status'].get(args.lance_id, None) else f"Edit {args.lance_id} lance"
+
 if (not args.delete):
 	payments['data']['lance_status'][args.lance_id] = lance_status
 	payments['data']['salary'][args.lance_id] = lance_money
@@ -33,7 +36,6 @@ else:
 json.dump(payments, open("json/payments.json", 'w'))
 
 # Pushing to origin
-commit_message = f"Add {args.lance_id} lance" if args.delete == False else f"Delete {args.lance_id}"
 os.system('git add .')
 time.sleep(1)
 os.system(f'git commit -am "{commit_message}"')

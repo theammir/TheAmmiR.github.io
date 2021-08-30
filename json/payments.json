@@ -1,5 +1,5 @@
 {
-	"data": [
+	"data": {
 		"lance_status": {
 			"tk1": "ok",
 			"test_lance-01": "waiting"
@@ -9,5 +9,5 @@
 			"tk1": 3.56,
 			"test_lance-01": 10
 		}
-	]
+	}
 }

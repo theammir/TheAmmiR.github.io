@@ -24,7 +24,7 @@ elif (args.lance_status == "2"):
 
 payments = json.load(open("json/payments.json", 'r'))
 
-commit_message = f"Add {args.lance_id} lance" if args.delete == False else f"Delete {args.lance_id}" if args.delete == True and payments['data']['lance_status'].get(args.lance_id, None) else f"Edit {args.lance_id} lance"
+commit_message = f"Add {args.lance_id} lance" if args.delete == False and not payments['data']['lance_status'].get(args.lance_id, None) else f"Delete {args.lance_id}" if args.delete == True  else f"Edit {args.lance_id} lance"
 
 if (not args.delete):
 	payments['data']['lance_status'][args.lance_id] = lance_status

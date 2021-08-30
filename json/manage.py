@@ -1,7 +1,7 @@
 import argparse
 import json
 import time
-import subprocess
+import os
 
 __parser = argparse.ArgumentParser()
 
@@ -34,8 +34,8 @@ json.dump(payments, open("json/payments.json", 'w'))
 
 # Pushing to origin
 commit_message = f"Add {args.lance_id} lance" if args.delete == False else f"Delete {args.lance_id}"
-subprocess.Popen('git add .')
+os.system('git add .')
 time.sleep(1)
-subprocess.Popen(f'git commit -am "{commit_message}"')
+os.system(f'git commit -am "{commit_message}"')
 time.sleep(3)
-subprocess.Popen('git push origin master')
+os.system('git push origin master')

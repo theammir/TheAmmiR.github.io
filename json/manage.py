@@ -32,5 +32,7 @@ else:
 json.dump(payments, open("json/payments.json", 'w'))
 
 # Pushing to origin
-subprocess.Popen(f'git commit -am "Add {args.lance_id} lance"', shell=True)
+commit_message = f"Add {args.lance_id} lance" if args.delete == False else f"Delete {args.lance_id}"
+subprocess.Popen('git add .')
+subprocess.Popen(f'git commit -am "{commit_message}"')
 subprocess.Popen('git push origin master')

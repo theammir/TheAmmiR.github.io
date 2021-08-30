@@ -1,1 +1,1 @@
-{"data": {"lance_status": {"tk1": "ok", "test_lance-01": "waiting", "another_order": "did-not"}, "salary": {"tk1": 3.56, "test_lance-01": 10, "another_order": 145.9}}}
+{"data": {"lance_status": {"tk1": "ok", "test_lance-01": "waiting"}, "salary": {"tk1": 3.56, "test_lance-01": 10}}}

@@ -5,7 +5,7 @@ import subprocess
 __parser = argparse.ArgumentParser()
 
 __parser.add_argument("lance_id", type=str)
-__parser.add_argument("lance_money", nargs='?', type=str)
+__parser.add_argument("lance_money", nargs='?', type=str, default="0")
 __parser.add_argument("lance_status", nargs="?", type=str)
 __parser.add_argument("-d", "--delete", action='store_true')
 

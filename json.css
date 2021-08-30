@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+#order-table {
+	background-color: #121212;
+	table-layout: fixed;
+	width: 100%;
+	border: 3px solid black;
+	color: #cccccc;
+	font-family: "Roboto Mono", medium-500;
+	text-align: center;
+}
+
+#money-sum {
+	color: lightgreen;
+}
+
+body {
+	background-color: #111130;
+}

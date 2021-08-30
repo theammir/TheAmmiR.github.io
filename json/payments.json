@@ -1,0 +1,13 @@
+{
+	"data": {
+		"lance_status": {
+			"tk1": "ok",
+			"test_lance-01": "waiting", // "waiting" / "ok" / "did-not"
+		}
+
+		"salary": {
+			"tk1": 3.56,
+			"test_lance-01": 10
+		}
+	}
+};

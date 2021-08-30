@@ -33,4 +33,4 @@ json.dump(payments, open("json/payments.json", 'w'))
 
 # Pushing to origin
 subprocess.Popen(f'git commit -am "Add {args.lance_id} lance"', shell=True)
-subprocess.Popen('git push origin master', shell=True)
+subprocess.Popen('git push origin master')
